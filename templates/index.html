@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <wrapper>
+        <h1>Dojo Survey</h1>
+    
+        <form action="/process" method="post">
+            <label>Your Name
+                <input type="text" name="name">
+            </label>
+            <label> Dojo Location
+                <select name="location">
+                    <option value="San Jose">San Jose</option>
+                    <option value="St Louis">St Louis</option>
+                    <option value="Houston">Houston</option>
+                    <option value="Edwardsville">Edwardsville</option>
+                </select>
+            </label>
+            <label class="language">Favorite Language
+                <input type="checkbox" name="language" value="python">Python
+                <input type="checkbox" name="language" value="javascript">JavaScript
+                <input type="checkbox" name="language" value="spanglish">Spanglish
+                <input type="checkbox" name="language" value="java">Java
+                <input type="checkbox" name="language" value="italian">Italian
+            </label>
+            <label>Gender
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="other" checked>I prefer not to answer
+            </label>
+            <label class="comment">Comment (optional):
+                <input type="text" name="comment" class="comment2">
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </wrapper>
+</body>
+</html>
